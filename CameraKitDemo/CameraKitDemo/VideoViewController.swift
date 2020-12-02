@@ -94,18 +94,16 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
     
     var isInferencing = false
     
+    @IBOutlet weak var directionLabel: UILabel!
     @IBOutlet weak var zoomLabel: UILabel!
+
     @IBOutlet weak var captureButton: UIButton!
     
-    @IBOutlet weak var labelsTableView: UITableView!
-    
-    //@IBOutlet weak var depthvalue:UILabel!
-    
+
     @IBOutlet weak var predictionLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
     var request: VNCoreMLRequest!
-//    var requests = [VNRequest]()
     var requests: VNCoreMLRequest?
     var predictions: [VNRecognizedObjectObservation] = []
 
@@ -120,11 +118,49 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
     
     // Newly Added Code
     
-    
+
     func didChangeValue(session: CKFSession, value: Any, key: String) {
         if key == "zoom" {
             //self.zoomLabel.text = String(format: "%.1fx", value as! Double)
         }
+
+    }
+    
+    func displayInfo(value: String, key: String){
+        if key == "angle"{
+            self.zoomLabel.text = "Info: " + (String)(value) + " detected."
+        }
+    }
+    
+    
+    func displayInstruction(value: Float, key: String){
+        var canMove = false
+        if key == "depth"{
+            if value > 10 {
+            self.directionLabel.textColor = UIColor.red
+            self.directionLabel.text = "Distance is either too close or too far."
+            }
+            // Checking if the user is too close to the car, change 1 accordingly
+            else if value < 1 {     // Add & condition based on angle
+                self.directionLabel.textColor = UIColor.red
+                self.directionLabel.text = "Instruction: Move away from the automobile"
+            }
+            else if value > 5.5 {   // Add & condition based on angle
+//                self.directionLabel.text = "Instruction: " + (String)(value) + " detected."
+                self.directionLabel.textColor = UIColor.red
+                self.directionLabel.text = "Instruction: Move closer to the automobile"
+            }
+            else{
+                canMove = true
+            }
+        }
+        //            Add Speed
+        if canMove == true{ // If recording
+            self.directionLabel.textColor = UIColor.green
+            self.directionLabel.text = "Instruction: Continue moving towards the right"
+
+        }
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -159,12 +195,11 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        zoomLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
+
+        
         let value = UIInterfaceOrientation.portrait.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
-        
-        
-        //        self.panelView.transform = CGAffineTransform(translationX: 0, y: self.panelView.frame.height + 5)
-        //        self.panelView.isUserInteractionEnabled = false
         
         model = resnet50custom_recent().model
         model2 = YOLOv3TinyNew().model
@@ -217,25 +252,6 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
 
         self.requests = VNCoreMLRequest(model: visionModel2, completionHandler:self.visionRequestDidComplete)
         self.requests?.imageCropAndScaleOption = .scaleFill
-        
-        
-//
-//        let objectRecognition = VNCoreMLRequest(model: visionModel2, completionHandler: { (request, error) in
-//            if let predictions = request.results as? [VNRecognizedObjectObservation] {
-//
-//                DispatchQueue.main.async{
-//                    self.previewView.predictedObjects = predictions
-//                }
-//
-//                self.isInferencing = false
-//            } else {
-//                self.isInferencing = false
-//            }
-//            self.semaphore.signal()
-//            // Old code commented out
-//        })
-//        self.requests = [objectRecognition]
-//
         return error
     }
     
@@ -269,7 +285,7 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
             
             // The observations appear to be sorted by confidence already, so we
             // take the top 5 and map them to an array of (String, Double) tuples.
-            let top5 = observations.prefix(through: 1)
+            let top5 = observations.prefix(through: 0)
                 .map { ($0.identifier, Double($0.confidence)) }
             
             DispatchQueue.main.async{
@@ -283,6 +299,7 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
     func show(results: [Prediction]) {
         var s: [String] = []
         for (i, pred) in results.enumerated() {
+            self.displayInfo(value: pred.0, key: "angle")
             s.append(String(format: "%d: %@ (%3.2f%%)", i + 1, pred.0, pred.1 * 100))
         }
         predictionLabel.text = s.joined(separator: "\n\n")
@@ -318,22 +335,6 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
         self.previewView.session?.stop()
     }
     
-    @IBAction func handleSwipeDown(_ sender: Any) {
-        self.panelView.isUserInteractionEnabled = false
-        self.captureButton.isUserInteractionEnabled = true
-        UIView.animate(withDuration: 0.2) {
-            self.panelView.transform = CGAffineTransform(translationX: 0, y: self.panelView.frame.height)
-        }
-    }
-    
-    @IBAction func handleSwipeUp(_ sender: Any) {
-        self.panelView.isUserInteractionEnabled = true
-        self.captureButton.isUserInteractionEnabled = false
-        UIView.animate(withDuration: 0.2) {
-            self.panelView.transform = CGAffineTransform(translationX: 0, y: 0)
-        }
-    }
-    
     @IBAction func handleCapture(_ sender: UIButton) {
         if let session = self.previewView.session as? CKFVideoSession {
             if session.isRecording {
@@ -351,17 +352,7 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
         }
     }
     
-    //    @IBAction func handlePhoto(_ sender: Any) {
-    //        guard let window = UIApplication.shared.keyWindow else {
-    //            return
-    //        }
-    //
-    //        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Photo")
-    //        UIView.transition(with: window, duration: 0.5, options: .transitionFlipFromLeft, animations: {
-    //            window.rootViewController = vc
-    //        }, completion: nil)
-    //    }
-    
+
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -397,31 +388,11 @@ extension VideoViewController: VideoCaptureDelegate {
         }
     }
     
-    public func exifOrientationFromDeviceOrientation() -> CGImagePropertyOrientation {
-        let curDeviceOrientation = UIDevice.current.orientation
-        let exifOrientation: CGImagePropertyOrientation
-        
-        switch curDeviceOrientation {
-        case UIDeviceOrientation.portraitUpsideDown:  // Device oriented vertically, home button on the top
-            exifOrientation = .left
-        case UIDeviceOrientation.landscapeLeft:       // Device oriented horizontally, home button on the right
-            exifOrientation = .left
-        case UIDeviceOrientation.landscapeRight:      // Device oriented horizontally, home button on the left
-            exifOrientation = .left
-        case UIDeviceOrientation.portrait:            // Device oriented vertically, home button on the bottom
-            exifOrientation = .left
-        default:
-            //        exifOrientation = .up
-            exifOrientation = .left
-            
-        }
-        return exifOrientation
-    }
     
     func depthvideoCapture(distance:String) {
         let distancevalue = (distance as NSString).floatValue
         DispatchQueue.main.async {
-            self.zoomLabel.text = "Depth: " + (String)(distancevalue) + " m"
+            self.displayInstruction(value: distancevalue, key: "depth")
             self.semaphore.signal()
         }
     }

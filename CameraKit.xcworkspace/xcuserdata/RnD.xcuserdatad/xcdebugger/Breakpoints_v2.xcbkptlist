@@ -48,55 +48,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "187"
             endingLineNumber = "187"
-            landmarkName = "record(url:_:error:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0E0CFB4B-9BB8-4C77-93C0-A5828D726257"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "324"
-            endingLineNumber = "324"
-            landmarkName = "handleCapture(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CC4764DD-6C4B-4067-BE13-24413B6BEC69"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "325"
-            endingLineNumber = "325"
-            landmarkName = "handleCapture(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "44ED63AC-822F-48C7-84F7-C0B121FE84B9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "328"
-            endingLineNumber = "328"
-            landmarkName = "handleCapture(_:)"
+            landmarkName = "stopRecording()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -112,7 +64,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "188"
             endingLineNumber = "188"
-            landmarkName = "record(url:_:error:)"
+            landmarkName = "stopRecording()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -128,7 +80,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "189"
             endingLineNumber = "189"
-            landmarkName = "record(url:_:error:)"
+            landmarkName = "stopRecording()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -238,8 +190,8 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "setUpVision()"
             landmarkType = "7">
          </BreakpointContent>
@@ -254,42 +206,10 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
             landmarkName = "setUpVision()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "31834CD2-6222-4D27-AB14-6F0E0481B7DB - 3aadcfe00a83693c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CameraKitDemo.VideoViewController.setUpVision() -&gt; Swift.Optional&lt;__C.NSError&gt;"
-                  moduleName = "CameraKitDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/RnD/Desktop/ACV%20R&amp;D/camerakit-ios-master-backup/CameraKitDemo/CameraKitDemo/VideoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "211"
-                  endingLineNumber = "211"
-                  offsetFromSymbolStart = "624">
-               </Location>
-               <Location
-                  uuid = "31834CD2-6222-4D27-AB14-6F0E0481B7DB - 8e0ae9369b50512c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #2 (__C.VNRequest, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in implicit closure #1 (CameraKitDemo.VideoViewController) -&gt; (__C.VNRequest, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CameraKitDemo.VideoViewController.setUpVision() -&gt; Swift.Optional&lt;__C.NSError&gt;"
-                  moduleName = "CameraKitDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/RnD/Desktop/ACV%20R&amp;D/camerakit-ios-master-backup/CameraKitDemo/CameraKitDemo/VideoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "211"
-                  endingLineNumber = "211"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -351,9 +271,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "471"
-            endingLineNumber = "471"
-            landmarkName = "captureOutput(_:didOutput:from:)"
-            landmarkType = "7">
+            endingLineNumber = "471">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -367,25 +285,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "472"
-            endingLineNumber = "472"
-            landmarkName = "captureOutput(_:didOutput:from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EE859C7D-F99B-4B69-A5B6-D0BFF0656D06"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            endingLineNumber = "472">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -398,9 +298,9 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "262"
-            endingLineNumber = "262"
-            landmarkName = "requestDidComplete(request:error:)"
+            startingLineNumber = "278"
+            endingLineNumber = "278"
+            landmarkName = "predict(pixelBuffer:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -414,9 +314,9 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "394"
-            endingLineNumber = "394"
-            landmarkName = "depthvideoCapture(distance:)"
+            startingLineNumber = "385"
+            endingLineNumber = "385"
+            landmarkName = "videoCapture(didCaptureVideoFrame:timestamp:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -430,9 +330,9 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "254"
-            endingLineNumber = "254"
-            landmarkName = "requestDidComplete(request:error:)"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
+            landmarkName = "visionRequestDidComplete(request:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -446,9 +346,9 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
-            landmarkName = "predict(pixelBuffer:)"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
+            landmarkName = "setUpVision()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -462,9 +362,9 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
-            landmarkName = "predict(pixelBuffer:)"
+            startingLineNumber = "256"
+            endingLineNumber = "256"
+            landmarkName = "setUpVision()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -478,10 +378,10 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
-            landmarkName = "requestDidComplete(request:error:)"
-            landmarkType = "7">
+            startingLineNumber = "274"
+            endingLineNumber = "274"
+            landmarkName = "VideoViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -510,10 +410,10 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
-            landmarkName = "requestDidComplete(request:error:)"
-            landmarkType = "7">
+            startingLineNumber = "273"
+            endingLineNumber = "273"
+            landmarkName = "VideoViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -590,9 +490,9 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "244"
-            endingLineNumber = "244"
-            landmarkName = "predict(pixelBuffer:)"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
+            landmarkName = "visionRequestDidComplete(request:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -606,9 +506,9 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248"
-            landmarkName = "predict(pixelBuffer:)"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
+            landmarkName = "visionRequestDidComplete(request:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -622,8 +522,8 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
             landmarkName = "setUpVision()"
             landmarkType = "7">
          </BreakpointContent>
@@ -638,40 +538,40 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
             landmarkName = "setUpVision()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "EC0AA1C2-88CB-4BE5-87ED-7B039ED2A18C - 3aadcfe00a8368a0"
+                  uuid = "EC0AA1C2-88CB-4BE5-87ED-7B039ED2A18C - 50f093a02c2708e3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "CameraKitDemo.VideoViewController.setUpVision() -&gt; Swift.Optional&lt;__C.NSError&gt;"
                   moduleName = "CameraKitDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/RnD/Desktop/ACV%20R&amp;D/camerakit-ios-master-backup/CameraKitDemo/CameraKitDemo/VideoViewController.swift"
+                  urlString = "file:///Users/RnD/Documents/GitHub/InstaAuction/CameraKitDemo/CameraKitDemo/VideoViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "215"
-                  endingLineNumber = "215"
-                  offsetFromSymbolStart = "912">
+                  startingLineNumber = "214"
+                  endingLineNumber = "214"
+                  offsetFromSymbolStart = "592">
                </Location>
                <Location
-                  uuid = "EC0AA1C2-88CB-4BE5-87ED-7B039ED2A18C - cebf7af3642d46f"
+                  uuid = "EC0AA1C2-88CB-4BE5-87ED-7B039ED2A18C - e457b576bdf430f3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.VNRequest, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CameraKitDemo.VideoViewController.setUpVision() -&gt; Swift.Optional&lt;__C.NSError&gt;"
+                  symbolName = "implicit closure #2 (__C.VNRequest, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in implicit closure #1 (CameraKitDemo.VideoViewController) -&gt; (__C.VNRequest, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CameraKitDemo.VideoViewController.setUpVision() -&gt; Swift.Optional&lt;__C.NSError&gt;"
                   moduleName = "CameraKitDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/RnD/Desktop/ACV%20R&amp;D/camerakit-ios-master-backup/CameraKitDemo/CameraKitDemo/VideoViewController.swift"
+                  urlString = "file:///Users/RnD/Documents/GitHub/InstaAuction/CameraKitDemo/CameraKitDemo/VideoViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "216"
-                  endingLineNumber = "216"
-                  offsetFromSymbolStart = "272">
+                  startingLineNumber = "214"
+                  endingLineNumber = "214"
+                  offsetFromSymbolStart = "40">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -686,8 +586,8 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
             landmarkName = "setUpVision()"
             landmarkType = "7">
          </BreakpointContent>

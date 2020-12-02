@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GmM-IO-P9K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GmM-IO-P9K">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -633,6 +633,36 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </visualEffectView>
+                                    <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbB-D2-Bok">
+                                        <rect key="frame" x="60" y="274.5" width="200" height="19"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KUW-4v-klc">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="19"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diq-r1-Q3R" userLabel="Direction Label">
+                                                    <rect key="frame" x="5" y="2" width="190" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="diq-r1-Q3R" firstAttribute="leading" secondItem="KUW-4v-klc" secondAttribute="leading" constant="5" id="94k-zw-7dR"/>
+                                                <constraint firstItem="diq-r1-Q3R" firstAttribute="top" secondItem="KUW-4v-klc" secondAttribute="top" constant="2" id="BoP-cO-HCe"/>
+                                                <constraint firstAttribute="bottom" secondItem="diq-r1-Q3R" secondAttribute="bottom" constant="2" id="wE5-Kr-5SX"/>
+                                                <constraint firstAttribute="trailing" secondItem="diq-r1-Q3R" secondAttribute="trailing" constant="5" id="wOj-uP-l6G"/>
+                                            </constraints>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="buK-K2-zPM"/>
+                                        </constraints>
+                                        <blurEffect style="light"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </visualEffectView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -645,7 +675,9 @@
                                     <constraint firstItem="VS2-GI-Ngc" firstAttribute="bottom" secondItem="aD4-vr-3Ay" secondAttribute="bottom" id="hVR-DZ-1Mr"/>
                                     <constraint firstItem="geg-uJ-o6S" firstAttribute="centerX" secondItem="H5V-hZ-kXh" secondAttribute="centerX" id="iIA-Sr-wtG"/>
                                     <constraint firstItem="aD4-vr-3Ay" firstAttribute="leading" secondItem="H5V-hZ-kXh" secondAttribute="leading" id="kIU-Q1-sx9"/>
+                                    <constraint firstItem="hbB-D2-Bok" firstAttribute="centerY" secondItem="aD4-vr-3Ay" secondAttribute="centerY" id="m7U-JL-8lG"/>
                                     <constraint firstItem="geg-uJ-o6S" firstAttribute="top" secondItem="aD4-vr-3Ay" secondAttribute="top" constant="8" id="pYD-MB-Rxl"/>
+                                    <constraint firstItem="hbB-D2-Bok" firstAttribute="centerX" secondItem="geg-uJ-o6S" secondAttribute="centerX" id="v0L-ob-Ywa"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ImZ-dP-6IQ">
@@ -681,64 +713,22 @@
                                     <constraint firstItem="sB0-OM-OYf" firstAttribute="centerX" secondItem="ImZ-dP-6IQ" secondAttribute="centerX" id="VSs-uY-uYJ"/>
                                 </constraints>
                             </view>
-                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gUz-01-u2q">
-                                <rect key="frame" x="0.0" y="336" width="320" height="264"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="cVo-H7-bLb">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ey-NY-QoG">
-                                            <rect key="frame" x="144" y="12" width="32" height="4"/>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="32" id="1NP-us-we1"/>
-                                                <constraint firstAttribute="height" constant="4" id="J6V-Rw-2C7"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="2"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="0Ey-NY-QoG" firstAttribute="centerX" secondItem="cVo-H7-bLb" secondAttribute="centerX" id="2k8-im-rAa"/>
-                                        <constraint firstItem="0Ey-NY-QoG" firstAttribute="top" secondItem="cVo-H7-bLb" secondAttribute="top" constant="12" id="It4-yL-l3X"/>
-                                    </constraints>
-                                </view>
-                                <gestureRecognizers/>
-                                <blurEffect style="light"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="24"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="m4s-Tw-wPg" appends="YES" id="zVR-MY-tJP"/>
-                                </connections>
-                            </visualEffectView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sSp-XZ-ylh"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ImZ-dP-6IQ" firstAttribute="leading" secondItem="sSp-XZ-ylh" secondAttribute="leading" id="1V6-pO-b9z"/>
-                            <constraint firstAttribute="bottom" secondItem="gUz-01-u2q" secondAttribute="bottom" constant="-32" id="A2L-Lx-aQ8"/>
                             <constraint firstItem="sSp-XZ-ylh" firstAttribute="trailing" secondItem="H5V-hZ-kXh" secondAttribute="trailing" id="JBy-q5-VZw"/>
                             <constraint firstItem="sSp-XZ-ylh" firstAttribute="trailing" secondItem="ImZ-dP-6IQ" secondAttribute="trailing" id="KVa-pZ-IL1"/>
                             <constraint firstAttribute="bottom" secondItem="ImZ-dP-6IQ" secondAttribute="bottom" id="NCs-xl-Ja0"/>
-                            <constraint firstItem="sSp-XZ-ylh" firstAttribute="trailing" secondItem="gUz-01-u2q" secondAttribute="trailing" id="UHd-40-m4B"/>
                             <constraint firstItem="H5V-hZ-kXh" firstAttribute="leading" secondItem="sSp-XZ-ylh" secondAttribute="leading" id="ZQf-KZ-Erc"/>
                             <constraint firstItem="H5V-hZ-kXh" firstAttribute="top" secondItem="sSp-XZ-ylh" secondAttribute="top" id="r2b-XE-gzV"/>
                             <constraint firstItem="sSp-XZ-ylh" firstAttribute="bottom" secondItem="H5V-hZ-kXh" secondAttribute="bottom" id="rc8-xK-EC1"/>
-                            <constraint firstItem="gUz-01-u2q" firstAttribute="leading" secondItem="sSp-XZ-ylh" secondAttribute="leading" id="tTX-uD-cxu"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="lS0-ae-g6z" appends="YES" id="2b9-A9-j01"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="captureButton" destination="sB0-OM-OYf" id="KVE-9U-BFl"/>
-                        <outlet property="panelView" destination="gUz-01-u2q" id="6Df-XD-E65"/>
+                        <outlet property="directionLabel" destination="diq-r1-Q3R" id="Nto-Q5-cnb"/>
                         <outlet property="predictionLabel" destination="ccu-6R-lNq" id="kBf-Fk-Wcf"/>
                         <outlet property="previewView" destination="aD4-vr-3Ay" id="Nkz-Q6-QBD"/>
                         <outlet property="timeLabel" destination="WqE-mF-VWT" id="AGy-n3-dyX"/>
@@ -747,18 +737,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWL-hm-jK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="down" id="m4s-Tw-wPg">
-                    <connections>
-                        <action selector="handleSwipeDown:" destination="GmM-IO-P9K" id="ehN-IM-RlY"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="up" id="lS0-ae-g6z">
-                    <connections>
-                        <action selector="handleSwipeUp:" destination="GmM-IO-P9K" id="mxb-PY-G6S"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-999" y="-1458"/>
+            <point key="canvasLocation" x="-999.375" y="-1458.8028169014085"/>
         </scene>
         <!--Video Settings View Controller-->
         <scene sceneID="Vtc-5y-dcw">
