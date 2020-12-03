@@ -129,6 +129,8 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
     func displayInfo(value: String, key: String){
         if key == "angle"{
             self.zoomLabel.text = "Info: " + (String)(value) + " detected."
+            self.zoomLabel.font = self.zoomLabel.font.withSize(15)
+
         }
     }
     
@@ -136,18 +138,18 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
     func displayInstruction(value: Float, key: String){
         var canMove = false
         if key == "depth"{
-            if value > 10 {
             self.directionLabel.textColor = UIColor.red
+            self.directionLabel.font = self.directionLabel.font.withSize(15)
+
+            if value > 10 {
             self.directionLabel.text = "Distance is either too close or too far."
             }
             // Checking if the user is too close to the car, change 1 accordingly
             else if value < 1 {     // Add & condition based on angle
-                self.directionLabel.textColor = UIColor.red
                 self.directionLabel.text = "Instruction: Move away from the automobile"
             }
             else if value > 5.5 {   // Add & condition based on angle
 //                self.directionLabel.text = "Instruction: " + (String)(value) + " detected."
-                self.directionLabel.textColor = UIColor.red
                 self.directionLabel.text = "Instruction: Move closer to the automobile"
             }
             else{
@@ -195,7 +197,10 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        zoomLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
+        zoomLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
+        directionLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
+
+        
 
         
         let value = UIInterfaceOrientation.portrait.rawValue
@@ -302,12 +307,12 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
             self.displayInfo(value: pred.0, key: "angle")
             s.append(String(format: "%d: %@ (%3.2f%%)", i + 1, pred.0, pred.1 * 100))
         }
-        predictionLabel.text = s.joined(separator: "\n\n")
+//        predictionLabel.text = s.joined(separator: "\n\n")
         if  startTimes.count != 0
         {
             let elapsed = CACurrentMediaTime() - startTimes.remove(at: 0)
             // let fps = self.measureFPS()
-            timeLabel.text = String(format: "Elapsed time %.5f s", elapsed)
+//            timeLabel.text = String(format: "Elapsed time %.5f s", elapsed)
         }
     }
     

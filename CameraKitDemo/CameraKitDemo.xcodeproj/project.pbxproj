@@ -12,7 +12,6 @@
 		3A92F22021FF2AAC007E9BBE /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A92F21F21FF2AAC007E9BBE /* UIView+Border.swift */; };
 		3A93779121F0B181007386E4 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A93779021F0B181007386E4 /* VideoViewController.swift */; };
 		3AD9374821E53BF2006A8C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9374721E53BF2006A8C86 /* AppDelegate.swift */; };
-		3AD9374A21E53BF2006A8C86 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9374921E53BF2006A8C86 /* PhotoViewController.swift */; };
 		3AD9374D21E53BF2006A8C86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD9374B21E53BF2006A8C86 /* Main.storyboard */; };
 		3AD9374F21E53BF3006A8C86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AD9374E21E53BF3006A8C86 /* Assets.xcassets */; };
 		3AD9375221E53BF3006A8C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD9375021E53BF3006A8C86 /* LaunchScreen.storyboard */; };
@@ -40,7 +39,6 @@
 		3A93779021F0B181007386E4 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		3AD9374421E53BF2006A8C86 /* CameraKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD9374721E53BF2006A8C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3AD9374921E53BF2006A8C86 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		3AD9374C21E53BF2006A8C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3AD9374E21E53BF3006A8C86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AD9375121E53BF3006A8C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 			children = (
 				190FA5E12541320D00FE7540 /* models */,
 				3AD9374B21E53BF2006A8C86 /* Main.storyboard */,
-				3AD9374921E53BF2006A8C86 /* PhotoViewController.swift */,
 				3A93779021F0B181007386E4 /* VideoViewController.swift */,
 				3A92F21F21FF2AAC007E9BBE /* UIView+Border.swift */,
 				3AD9374E21E53BF3006A8C86 /* Assets.xcassets */,
@@ -186,7 +183,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AD9374A21E53BF2006A8C86 /* PhotoViewController.swift in Sources */,
 				BC9151A2255A26BE00A39541 /* DrawingBoundingBoxView.swift in Sources */,
 				3A93779121F0B181007386E4 /* VideoViewController.swift in Sources */,
 				BC32ABE62577273100CE173F /* resnet50custom_recent.mlmodel in Sources */,
