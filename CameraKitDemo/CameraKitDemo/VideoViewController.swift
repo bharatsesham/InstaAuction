@@ -127,42 +127,61 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
     }
     
     func displayInfo(value: String, key: String){
-        if key == "angle"{
-            self.zoomLabel.text = "Info: " + (String)(value) + " detected."
-            self.zoomLabel.font = self.zoomLabel.font.withSize(15)
-
+        if self.foundCar == false {
+            self.zoomLabel.textColor = UIColor.red
+            self.zoomLabel.font = self.directionLabel.font.withSize(15)
+            self.zoomLabel.text = "Car not found."
+        }
+        else {
+            if key == "angle"{
+                self.zoomLabel.textColor = UIColor.black
+                self.zoomLabel.text = "Info: " + (String)(value) + " detected."
+                self.zoomLabel.font = self.zoomLabel.font.withSize(15)
+                }
         }
     }
     
     
     func displayInstruction(value: Float, key: String){
-        var canMove = false
-        if key == "depth"{
+        // Instruction if car is not found.
+        if self.foundCar == false {
             self.directionLabel.textColor = UIColor.red
             self.directionLabel.font = self.directionLabel.font.withSize(15)
+            self.directionLabel.text = "Point the camera towards a car."
+        }
+        else{
+            // When car is found.
+//            if let session = self.previewView.session as? CKFVideoSession {
+//                if session.isRecording {
+//                }
+            
+            
+            var canMove = false
+            if key == "depth"{
+                self.directionLabel.textColor = UIColor.red
+                self.directionLabel.font = self.directionLabel.font.withSize(15)
 
-            if value > 10 {
-            self.directionLabel.text = "Distance is either too close or too far."
+                if value > 10 {
+                self.directionLabel.text = "Distance is either too close or too far."
+                }
+                // Checking if the user is too close to the car, change 1 accordingly
+                else if value < 1 {     // Add & condition based on angle
+                    self.directionLabel.text = "Instruction: Move away from the automobile"
+                }
+                else if value > 5.5 {   // Add & condition based on angle
+    //                self.directionLabel.text = "Instruction: " + (String)(value) + " detected."
+                    self.directionLabel.text = "Instruction: Move closer to the automobile"
+                }
+                else{
+                    canMove = true
+                }
             }
-            // Checking if the user is too close to the car, change 1 accordingly
-            else if value < 1 {     // Add & condition based on angle
-                self.directionLabel.text = "Instruction: Move away from the automobile"
-            }
-            else if value > 5.5 {   // Add & condition based on angle
-//                self.directionLabel.text = "Instruction: " + (String)(value) + " detected."
-                self.directionLabel.text = "Instruction: Move closer to the automobile"
-            }
-            else{
-                canMove = true
+            //            Add Speed
+            if canMove == true{ // If recording
+                self.directionLabel.textColor = UIColor.green
+                self.directionLabel.text = "Instruction: Continue moving towards the right"
             }
         }
-        //            Add Speed
-        if canMove == true{ // If recording
-            self.directionLabel.textColor = UIColor.green
-            self.directionLabel.text = "Instruction: Continue moving towards the right"
-
-        }
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -184,6 +203,8 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
     
     var model: MLModel? = nil
     var model2: MLModel? = nil
+    var foundCar = false
+
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.landscapeLeft
@@ -200,9 +221,6 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
         zoomLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
         directionLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
 
-        
-
-        
         let value = UIInterfaceOrientation.portrait.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
         
@@ -211,9 +229,7 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
         
         
         let session = CKFVideoSession()
-        
         let videoDevice = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: .video, position: .back).devices.first
-        
         do {
             try  videoDevice!.lockForConfiguration()
             let dimensions = CMVideoFormatDescriptionGetDimensions((videoDevice?.activeFormat.formatDescription)!)
@@ -224,15 +240,12 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
             print(error)
         }
         session.delegate = self
-        
-        
         self.previewView.autorotate = true
         self.previewView.session = session
         self.previewView.previewLayer?.videoGravity = .resizeAspectFill
         self.previewView.rootLayer = self.previewView.layer
         self.previewView.previewLayer!.frame = self.previewView.rootLayer.bounds
         self.previewView.rootLayer.addSublayer(self.previewView.previewLayer!)
-        
         setUpVision()
         
     }
@@ -261,8 +274,14 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
     }
     
     func visionRequestDidComplete(request: VNRequest, error: Error?) {
+        self.foundCar = false
         if let predictions = request.results as? [VNRecognizedObjectObservation] {
-            self.predictions = predictions
+            for prediction in predictions {
+                if (prediction.label == "bottle") {         // Change to car
+                    self.foundCar = true
+                    break
+                }
+            }
             DispatchQueue.main.async {
                 self.previewView.predictedObjects = predictions
                 self.isInferencing = false
@@ -308,25 +327,13 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
             s.append(String(format: "%d: %@ (%3.2f%%)", i + 1, pred.0, pred.1 * 100))
         }
 //        predictionLabel.text = s.joined(separator: "\n\n")
-        if  startTimes.count != 0
-        {
-            let elapsed = CACurrentMediaTime() - startTimes.remove(at: 0)
-            // let fps = self.measureFPS()
+//        if  startTimes.count != 0
+//        {
+//            let elapsed = CACurrentMediaTime() - startTimes.remove(at: 0)
 //            timeLabel.text = String(format: "Elapsed time %.5f s", elapsed)
-        }
+//        }
     }
     
-    func measureFPS() -> Double {
-        // Measure how many frames were actually delivered per second.
-        framesDone += 1
-        let frameCapturingElapsed = CACurrentMediaTime() - frameCapturingStartTime
-        let currentFPSDelivered = Double(framesDone) / frameCapturingElapsed
-        if frameCapturingElapsed > 1 {
-            framesDone = 0
-            frameCapturingStartTime = CACurrentMediaTime()
-        }
-        return currentFPSDelivered
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -369,26 +376,50 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
         let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer)
         try? handler.perform([request])
     }
+    
+    
+    func rotate(_ pixelBuffer: CVPixelBuffer) -> CVPixelBuffer? {
+//            guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
+//                return nil
+//            }
+            var newPixelBuffer: CVPixelBuffer?
+            let error = CVPixelBufferCreate(kCFAllocatorDefault,
+                                            CVPixelBufferGetHeight(pixelBuffer),
+                                            CVPixelBufferGetWidth(pixelBuffer),
+                                            kCVPixelFormatType_420YpCbCr8BiPlanarFullRange,
+                                            nil,
+                                            &newPixelBuffer)
+            guard error == kCVReturnSuccess else {
+                return nil
+            }
+            let ciImage = CIImage(cvPixelBuffer: pixelBuffer).oriented(.right)
+            let context = CIContext(options: nil)
+            context.render(ciImage, to: newPixelBuffer!)
+            return newPixelBuffer
+        }
+    
 }
 
 extension VideoViewController: VideoCaptureDelegate {
     
     func videoCapture(didCaptureVideoFrame pixelBuffer: CVPixelBuffer?, timestamp: CMTime) {
-        print("BackEnd")
         if let pixelBuffer = pixelBuffer {
             // For better throughput, perform the prediction on a background queue
             // instead of on the VideoCapture queue. We use the semaphore to block
             // the capture queue and drop frames when Core ML can't keep up.
             //let exifOrientation = self.exifOrientationFromDaeviceOrientation()
-            DispatchQueue.global(qos: .default).async
-            {
-                self.semaphore.wait()
-                self.predict(pixelBuffer: pixelBuffer)
-            }
+
             DispatchQueue.global(qos: .background).async
             {
                 self.semaphore.wait()
                 self.predictUsingVision(pixelBuffer: pixelBuffer)
+                
+//                self.predictUsingVision(pixelBuffer: self.rotate(pixelBuffer)!)
+            }
+            DispatchQueue.global(qos: .default).async
+            {
+                self.semaphore.wait()
+                self.predict(pixelBuffer: pixelBuffer)
             }
         }
     }

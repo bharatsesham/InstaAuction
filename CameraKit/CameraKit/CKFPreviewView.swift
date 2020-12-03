@@ -120,13 +120,16 @@ import Vision
         }
     }
     
-    func drawBoxs(with predictions: [VNRecognizedObjectObservation]) {
+    func drawBoxs(with predictions: [VNRecognizedObjectObservation]){
         subviews.forEach({ $0.removeFromSuperview() })
         
         for prediction in predictions {
-            createLabelAndBox(prediction: prediction)
+            if (prediction.label == "car") {
+                createLabelAndBox(prediction: prediction)
+            }
         }
     }
+    
     
     func createLabelAndBox(prediction: VNRecognizedObjectObservation) {
         let labelString: String? = prediction.label
@@ -135,7 +138,6 @@ import Vision
         let scale = CGAffineTransform.identity.scaledBy(x: bounds.width, y: bounds.height)
         let transform = CGAffineTransform(scaleX: 1, y: -1).translatedBy(x: 0, y: -1)
         let bgRect = prediction.boundingBox.applying(transform).applying(scale)
-        
         let bgView = UIView(frame: bgRect)
         bgView.layer.borderColor = color.cgColor
         bgView.layer.borderWidth = 4
@@ -153,7 +155,11 @@ import Vision
         label.sizeToFit()
         label.frame = CGRect(x: bgRect.origin.x, y: bgRect.origin.y - label.frame.height,
                              width: label.frame.width, height: label.frame.height)
+
+        
+        
         addSubview(label)
+//        print(bgRect.origin.x, bgRect.origin.y, label.frame.height, label.frame.width)
         //}
     }
 }
