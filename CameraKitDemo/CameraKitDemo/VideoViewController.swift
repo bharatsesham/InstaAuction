@@ -34,6 +34,7 @@ class VideoPreviewViewController: UIViewController {
         }
     }
     
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -115,6 +116,8 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
     var frameCapturingStartTime = CACurrentMediaTime()
     let semaphore = DispatchSemaphore(value: 3)
     var detectionOverlay: CALayer! = nil
+    var isRecording = false
+    var predictedSide = "Init"
     
     // Newly Added Code
     
@@ -150,37 +153,42 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
             self.directionLabel.text = "Point the camera towards a car."
         }
         else{
-            // When car is found.
-//            if let session = self.previewView.session as? CKFVideoSession {
-//                if session.isRecording {
-//                }
-            
-            
-            var canMove = false
-            if key == "depth"{
-                self.directionLabel.textColor = UIColor.red
-                self.directionLabel.font = self.directionLabel.font.withSize(15)
+            // When car is found - check foe the recording status.
+            // If not recording - Advice to go to the front of the car.
+            if self.isRecording == false {
+                if self.predictedSide != "Front"{
+                    self.directionLabel.textColor = UIColor.red
+                    self.directionLabel.font = self.directionLabel.font.withSize(15)
+                    self.directionLabel.text = "Move to the front of the car and start recording."
+                }
+            }
+            else {
+                var canMove = false
+                if key == "depth"{
+                    self.directionLabel.textColor = UIColor.red
+                    self.directionLabel.font = self.directionLabel.font.withSize(15)
 
-                if value > 10 {
-                self.directionLabel.text = "Distance is either too close or too far."
+                    if value > 10 {
+                    self.directionLabel.text = "Distance is either too close or too far."
+                    }
+                    // Checking if the user is too close to the car, change 1 accordingly
+                    else if value < 1 {     // Add & condition based on angle
+                        self.directionLabel.text = "Instruction: Move away from the automobile"
+                    }
+                    else if value > 5.5 {   // Add & condition based on angle
+        //                self.directionLabel.text = "Instruction: " + (String)(value) + " detected."
+                        self.directionLabel.text = "Instruction: Move closer to the automobile"
+                    }
+                    else{
+                        canMove = true
+                    }
                 }
-                // Checking if the user is too close to the car, change 1 accordingly
-                else if value < 1 {     // Add & condition based on angle
-                    self.directionLabel.text = "Instruction: Move away from the automobile"
+                //            Add Speed
+                if canMove == true{ // If recording
+                    self.directionLabel.textColor = UIColor.green
+                    self.directionLabel.text = "Instruction: Please continue moving towards the right"
                 }
-                else if value > 5.5 {   // Add & condition based on angle
-    //                self.directionLabel.text = "Instruction: " + (String)(value) + " detected."
-                    self.directionLabel.text = "Instruction: Move closer to the automobile"
-                }
-                else{
-                    canMove = true
-                }
-            }
-            //            Add Speed
-            if canMove == true{ // If recording
-                self.directionLabel.textColor = UIColor.green
-                self.directionLabel.text = "Instruction: Continue moving towards the right"
-            }
+        }
         }
     }
     
@@ -323,6 +331,7 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
     func show(results: [Prediction]) {
         var s: [String] = []
         for (i, pred) in results.enumerated() {
+            self.predictedSide = pred.0
             self.displayInfo(value: pred.0, key: "angle")
             s.append(String(format: "%d: %@ (%3.2f%%)", i + 1, pred.0, pred.1 * 100))
         }
@@ -351,9 +360,11 @@ class VideoViewController: UIViewController, CKFSessionDelegate{
         if let session = self.previewView.session as? CKFVideoSession {
             if session.isRecording {
                 sender.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+                self.isRecording = false
                 session.stopRecording()
             } else {
                 sender.backgroundColor = UIColor.red
+                self.isRecording = true
                 session.record({ (url) in
                     self.performSegue(withIdentifier: "Preview", sender: url)
                     usleep(200000) 

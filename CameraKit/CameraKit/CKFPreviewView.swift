@@ -124,7 +124,7 @@ import Vision
         subviews.forEach({ $0.removeFromSuperview() })
         
         for prediction in predictions {
-            if (prediction.label == "car") {
+            if (prediction.label == "bottle") {
                 createLabelAndBox(prediction: prediction)
             }
         }
