@@ -1,5 +1,5 @@
 //
-// This is a custom view for showing the frames/record the video. This file also is responsible for drawing blunding boxes.
+// This is a custom view for showing the frames/record the video. This file also is responsible for drawing bounding boxes.
 //
 //  Created by Avinash Parasurampuram on 08/23/2020.
 //

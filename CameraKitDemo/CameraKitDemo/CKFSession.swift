@@ -1,5 +1,6 @@
 //
-//  This file initiates the AVCaptureSession and returns the camera device input. It is also responsible for start and stop of the session
+//  This file initiates the AVCaptureSession and returns the camera device input. It is also responsible for start and stop of the
+//  session
 //
 //  Created by Avinash Parasurampuram on 09/03/2020.
 //
