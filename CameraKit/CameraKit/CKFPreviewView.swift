@@ -1,9 +1,7 @@
 //
-//  CKPreviewView.swift
-//  CameraKit
+// This is a custom view for showing the frames/record the video. This file also is responsible for drawing blunding boxes.
 //
-//  Created by Adrian Mateoaea on 08/01/2019.
-//  Copyright © 2019 Wonderkiln. All rights reserved.
+//  Created by Avinash Parasurampuram on 08/23/2020.
 //
 
 import UIKit
@@ -13,29 +11,28 @@ import Vision
 @objc open class CKFPreviewView: UIView {
     
     private var lastScale: CGFloat = 1.0
-    public var bufferSize: CGSize = .zero//KT
-    public var rootLayer: CALayer! = nil//KT
-    
+    public var bufferSize: CGSize = .zero
+    public var rootLayer: CALayer! = nil
+
     static private var colors: [String: UIColor] = [:]
-  
+
     @IBOutlet weak private var previewView: UIView!
-    
+
     @objc private(set) public var previewLayer: AVCaptureVideoPreviewLayer? {
         didSet {
             oldValue?.removeFromSuperlayer()
-            
+
             if let previewLayer = previewLayer {
                 self.layer.addSublayer(previewLayer)
             }
         }
     }
-    
+
     @objc public var session: CKFSession? {
-        
+
         didSet {
             oldValue?.stop()
-          
-            
+
             if let session = session {
                 self.previewLayer = AVCaptureVideoPreviewLayer(session: session.session)
                 session.previewLayer = self.previewLayer
@@ -49,60 +46,28 @@ import Vision
         didSet {
             if !self.autorotate {
                 self.previewLayer?.connection?.videoOrientation = .portrait
-                //self.previewLayer?.connection?.videoOrientation = UIDevice.current.orientation.videoOrientation
             }
         }
     }
-    
+
     @objc public override init(frame: CGRect) {
         super.init(frame: frame)
-        self.setupView()
     }
-    
+
     @objc public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.setupView()
     }
-    
-    private func setupView() {
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:)))
-        self.addGestureRecognizer(tapGestureRecognizer)
-        
-        let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(recognizer:)))
-        self.addGestureRecognizer(pinchGestureRecognizer)
-    }
-    
-    @objc private func handleTap(recognizer: UITapGestureRecognizer) {
-        let location = recognizer.location(in: self)
-        if let point = self.previewLayer?.captureDevicePointConverted(fromLayerPoint: location) {
-            self.session?.focus(at: point)
-        }
-    }
-    
-    @objc private func handlePinch(recognizer: UIPinchGestureRecognizer) {
-        if recognizer.state == .began {
-            recognizer.scale = self.lastScale
-        }
-        
-        let zoom = max(1.0, min(10.0, recognizer.scale))
-        self.session?.zoom = Double(zoom)
-        
-        if recognizer.state == .ended {
-            self.lastScale = zoom
-        }
-    }
-    
+
     public override func layoutSubviews() {
         super.layoutSubviews()
         self.previewLayer?.frame = self.bounds
-        //self.gridView?.frame = self.bounds
-        
+
         if self.autorotate {
             self.previewLayer?.connection?.videoOrientation = UIDevice.current.orientation.videoOrientation
         }
     }
-    
-    
+
+    // Select the color for the bounding box
     public func labelColor(with label: String) -> UIColor {
         if let color = CKFPreviewView.colors[label] {
             return color
@@ -112,55 +77,48 @@ import Vision
             return color
         }
     }
-    
+
+    // Draw the bounding boxes on the predicted objects coming from the car detection model
     public var predictedObjects: [VNRecognizedObjectObservation] = [] {
         didSet {
             self.drawBoxs(with: predictedObjects)
             self.setNeedsDisplay()
         }
     }
-    
+
+    // Draw the bounding box for each prediction only if the vision model detects a car.
     func drawBoxs(with predictions: [VNRecognizedObjectObservation]){
         subviews.forEach({ $0.removeFromSuperview() })
-        
         for prediction in predictions {
-            if (prediction.label == "bottle") {
+            if (prediction.label == "car" && prediction.boundingBox.width * prediction.boundingBox.height > 0.15) {
+                print(prediction.boundingBox.width * prediction.boundingBox.height, 1000)
                 createLabelAndBox(prediction: prediction)
             }
         }
     }
-    
-    
+
+    // This will create the box around the predicted object.
     func createLabelAndBox(prediction: VNRecognizedObjectObservation) {
         let labelString: String? = prediction.label
         let color: UIColor = labelColor(with: labelString ?? "N/A")
-        
-        let scale = CGAffineTransform.identity.scaledBy(x: bounds.width, y: bounds.height)
-        let transform = CGAffineTransform(scaleX: 1, y: -1).translatedBy(x: 0, y: -1)
-        let bgRect = prediction.boundingBox.applying(transform).applying(scale)
+
+        let bgRect = rotateRect(prediction.boundingBox)
         let bgView = UIView(frame: bgRect)
         bgView.layer.borderColor = color.cgColor
         bgView.layer.borderWidth = 4
         bgView.backgroundColor = UIColor.clear
-        
-        
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-//        if(labelString=="car")
-//        {
         addSubview(bgView)
-        label.text = labelString ?? "N/A"
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textColor = UIColor.black
-        label.backgroundColor = color
-        label.sizeToFit()
-        label.frame = CGRect(x: bgRect.origin.x, y: bgRect.origin.y - label.frame.height,
-                             width: label.frame.width, height: label.frame.height)
+    }
 
-        
-        
-        addSubview(label)
-//        print(bgRect.origin.x, bgRect.origin.y, label.frame.height, label.frame.width)
-        //}
+    // Rotates the bounding box predictions by 90 degrees.
+    func rotateRect(_ rect: CGRect) -> CGRect {
+        let x = rect.midX
+        let y = rect.midY
+        let scale = CGAffineTransform.identity.scaledBy(x: bounds.width, y: bounds.height)
+        let transform = CGAffineTransform(translationX: x, y: y)
+                                        .rotated(by: .pi / 2)
+                                        .translatedBy(x: -x, y: -y)
+        return rect.applying(transform).applying(scale)
     }
 }
 
@@ -170,12 +128,5 @@ extension VNRecognizedObjectObservation {
     }
 }
 
-extension CGRect {
-    func toString(digit: Int) -> String {
-        let xStr = String(format: "%.\(digit)f", origin.x)
-        let yStr = String(format: "%.\(digit)f", origin.y)
-        let wStr = String(format: "%.\(digit)f", width)
-        let hStr = String(format: "%.\(digit)f", height)
-        return "(\(xStr), \(yStr), \(wStr), \(hStr))"
-    }
-}
+
+

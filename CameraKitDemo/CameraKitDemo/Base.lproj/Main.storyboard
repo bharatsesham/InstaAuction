@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GmM-IO-P9K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GmM-IO-P9K">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -147,8 +147,8 @@
                     <connections>
                         <outlet property="captureButton" destination="sB0-OM-OYf" id="KVE-9U-BFl"/>
                         <outlet property="directionLabel" destination="diq-r1-Q3R" id="Nto-Q5-cnb"/>
+                        <outlet property="infoLabel" destination="Vgm-xz-SIc" id="hRp-Tz-G7W"/>
                         <outlet property="previewView" destination="aD4-vr-3Ay" id="Nkz-Q6-QBD"/>
-                        <outlet property="zoomLabel" destination="Vgm-xz-SIc" id="5W1-rV-OMx"/>
                         <segue destination="Qql-y3-LLb" kind="presentation" identifier="Preview" modalTransitionStyle="crossDissolve" id="6Wy-B1-H7W"/>
                     </connections>
                 </viewController>
@@ -212,9 +212,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

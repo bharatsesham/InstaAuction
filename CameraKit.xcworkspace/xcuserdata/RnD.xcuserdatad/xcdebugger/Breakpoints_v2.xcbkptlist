@@ -14,8 +14,8 @@
             filePath = "CameraKit/CameraKit/CKFVideoSession.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "stopRecording()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "CameraKit/CameraKit/CKFVideoSession.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "stopRecording()"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "CameraKit/CameraKit/CKFVideoSession.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "stopRecording()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "CameraKit/CameraKit/CKFVideoSession.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "stopRecording()"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "CameraKit/CameraKit/CKFVideoSession.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "stopRecording()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,10 +94,10 @@
             filePath = "CameraKit/CameraKit/CKFSession.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "captureDeviceType"
-            landmarkType = "24">
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -110,10 +110,10 @@
             filePath = "CameraKit/CameraKit/CKFSession.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "captureDeviceType"
-            landmarkType = "24">
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -126,10 +126,10 @@
             filePath = "CameraKit/CameraKit/CKFSession.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "captureDeviceType"
-            landmarkType = "24">
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -142,10 +142,10 @@
             filePath = "CameraKit/CameraKit/CKFSession.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "captureDeviceType"
-            landmarkType = "24">
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -158,10 +158,10 @@
             filePath = "CameraKit/CameraKit/CKFSession.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "captureDeviceType"
-            landmarkType = "24">
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -174,10 +174,10 @@
             filePath = "CameraKit/CameraKit/CKFSession.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "captureDeviceType"
-            landmarkType = "24">
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -190,9 +190,9 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "266"
-            endingLineNumber = "266"
-            landmarkName = "setUpVision()"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "setUpModels()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -206,9 +206,9 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "272"
-            endingLineNumber = "272"
-            landmarkName = "setUpVision()"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
+            landmarkName = "setUpModels()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -222,8 +222,8 @@
             filePath = "CameraKit/CameraKit/CKFVideoSession.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "443"
-            endingLineNumber = "443"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
             landmarkName = "captureOutput(_:didOutput:from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -238,8 +238,8 @@
             filePath = "CameraKit/CameraKit/CKFVideoSession.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "446"
-            endingLineNumber = "446"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
             landmarkName = "captureOutput(_:didOutput:from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -254,38 +254,10 @@
             filePath = "CameraKit/CameraKit/CKFVideoSession.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "447"
-            endingLineNumber = "447"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
             landmarkName = "captureOutput(_:didOutput:from:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9C8E59B5-A2F5-4EDD-843C-E6A3FAA52671"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CameraKit/CameraKit/CKFVideoSession.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "471"
-            endingLineNumber = "471">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0DD415E8-E74D-4338-A588-D59B155CAE94"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CameraKit/CameraKit/CKFVideoSession.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "472"
-            endingLineNumber = "472">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -298,8 +270,8 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "310"
-            endingLineNumber = "310"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
             landmarkName = "predict(pixelBuffer:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -314,8 +286,8 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "425"
-            endingLineNumber = "425"
+            startingLineNumber = "378"
+            endingLineNumber = "378"
             landmarkName = "videoCapture(didCaptureVideoFrame:timestamp:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -330,10 +302,10 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "302"
-            endingLineNumber = "302"
-            landmarkName = "visionRequestDidComplete(request:error:)"
-            landmarkType = "7">
+            startingLineNumber = "274"
+            endingLineNumber = "274"
+            landmarkName = "VideoViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -346,10 +318,10 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "283"
-            endingLineNumber = "283"
-            landmarkName = "setUpVision()"
-            landmarkType = "7">
+            startingLineNumber = "254"
+            endingLineNumber = "254"
+            landmarkName = "VideoViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -362,9 +334,9 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "282"
-            endingLineNumber = "282"
-            landmarkName = "setUpVision()"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
+            landmarkName = "setUpModels()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -378,10 +350,10 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "306"
-            endingLineNumber = "306"
-            landmarkName = "VideoViewController"
-            landmarkType = "3">
+            startingLineNumber = "278"
+            endingLineNumber = "278"
+            landmarkName = "predict(pixelBuffer:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -410,8 +382,8 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "305"
-            endingLineNumber = "305"
+            startingLineNumber = "276"
+            endingLineNumber = "276"
             landmarkName = "VideoViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -490,24 +462,8 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
-            landmarkName = "visionRequestDidComplete(request:error:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AA2AF980-4C8E-4EE9-A292-B36AE92F3B79"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "296"
-            endingLineNumber = "296"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
             landmarkName = "visionRequestDidComplete(request:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -522,73 +478,9 @@
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "280"
-            endingLineNumber = "280"
-            landmarkName = "setUpVision()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EC0AA1C2-88CB-4BE5-87ED-7B039ED2A18C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
-            landmarkName = "setUpVision()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "EC0AA1C2-88CB-4BE5-87ED-7B039ED2A18C - 50f093a02c2708e3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CameraKitDemo.VideoViewController.setUpVision() -&gt; Swift.Optional&lt;__C.NSError&gt;"
-                  moduleName = "CameraKitDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/RnD/Documents/GitHub/InstaAuction/CameraKitDemo/CameraKitDemo/VideoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "214"
-                  endingLineNumber = "214"
-                  offsetFromSymbolStart = "592">
-               </Location>
-               <Location
-                  uuid = "EC0AA1C2-88CB-4BE5-87ED-7B039ED2A18C - e457b576bdf430f3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #2 (__C.VNRequest, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in implicit closure #1 (CameraKitDemo.VideoViewController) -&gt; (__C.VNRequest, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CameraKitDemo.VideoViewController.setUpVision() -&gt; Swift.Optional&lt;__C.NSError&gt;"
-                  moduleName = "CameraKitDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/RnD/Documents/GitHub/InstaAuction/CameraKitDemo/CameraKitDemo/VideoViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "214"
-                  endingLineNumber = "214"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "67315A92-CA3F-40AA-A935-51DA037F2B7C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "277"
-            endingLineNumber = "277"
-            landmarkName = "setUpVision()"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
+            landmarkName = "setUpModels()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -627,47 +519,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3CC9BA0C-2DF2-48EB-B7D0-AAFC4F758C15"
+            uuid = "6B3EF88E-C808-46DD-822B-FE584F69D073"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Desktop/ACV R&amp;D/iOS Prototypes/BIZPhoto3D-master/BIZPhoto3D/BIZPhoto3D/ViewController.h"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "076314E0-310A-4B7A-8E78-6DACD6CF5F69"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "387"
-            endingLineNumber = "387"
-            landmarkName = "predictUsingVision(pixelBuffer:)"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "displayInstruction(value:key:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D011F1F3-C087-44EA-9526-090E33F9A170"
+            uuid = "F2DF6112-2532-4155-8DB2-E77CC81812A9"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "422"
-            endingLineNumber = "422"
-            landmarkName = "videoCapture(didCaptureVideoFrame:timestamp:)"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "displayInstruction(value:key:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D0CF4285-F45D-4202-9005-897DFAF7C2D9"
-            shouldBeEnabled = "Yes"
+            uuid = "74E68FC1-78B8-4011-8A53-9BE81EB3510B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CameraKitDemo/CameraKitDemo/VideoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "displayInstruction(value:key:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F15C45C8-EBC2-4AF5-9A82-44BFA72C4982"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CameraKit/CameraKit/CKFPreviewView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "createLabelAndBox(prediction:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -675,15 +599,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EA64B377-66B5-4D57-B8F4-F9E5EC0122F4"
-            shouldBeEnabled = "Yes"
+            uuid = "E9A60FA2-352C-4183-8ACC-CD6CF45BA826"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CameraKit/CameraKit/CKFPreviewView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "createLabelAndBox(prediction:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -691,17 +615,81 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C0C9199B-6EC7-4A4D-9FF7-8269F5A7E20C"
-            shouldBeEnabled = "Yes"
+            uuid = "AE685A06-6A5A-406E-91D6-5B462AD91FA2"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CameraKit/CameraKit/CKFPreviewView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
-            landmarkName = "createLabelAndBox(prediction:)"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "drawBoxs(with:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1FC79575-A7C6-4852-8C27-93354F2E193B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CameraKit/CameraKit/CKFPreviewView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "drawBoxs(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1FC79575-A7C6-4852-8C27-93354F2E193B - 1cd58b379dfc0c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CameraKit.CKFPreviewView.drawBoxs(with: Swift.Array&lt;__C.VNRecognizedObjectObservation&gt;) -&gt; ()"
+                  moduleName = "CameraKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/RnD/Documents/GitHub/InstaAuction/CameraKit/CameraKit/CKFPreviewView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "1FC79575-A7C6-4852-8C27-93354F2E193B - db22679899c465a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIView) -&gt; () in CameraKit.CKFPreviewView.drawBoxs(with: Swift.Array&lt;__C.VNRecognizedObjectObservation&gt;) -&gt; ()"
+                  moduleName = "CameraKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/RnD/Documents/GitHub/InstaAuction/CameraKit/CameraKit/CKFPreviewView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9705A1BF-6384-4F6E-8CA7-61EE7107A7CB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CameraKit/CameraKit/CKFError.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

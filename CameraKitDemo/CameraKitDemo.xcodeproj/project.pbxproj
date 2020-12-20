@@ -9,15 +9,13 @@
 /* Begin PBXBuildFile section */
 		3A76E33721E5415600C8461D /* CameraKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD9375A21E53C14006A8C86 /* CameraKit.framework */; };
 		3A76E33821E5415600C8461D /* CameraKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD9375A21E53C14006A8C86 /* CameraKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3A92F22021FF2AAC007E9BBE /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A92F21F21FF2AAC007E9BBE /* UIView+Border.swift */; };
 		3A93779121F0B181007386E4 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A93779021F0B181007386E4 /* VideoViewController.swift */; };
 		3AD9374821E53BF2006A8C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9374721E53BF2006A8C86 /* AppDelegate.swift */; };
 		3AD9374D21E53BF2006A8C86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD9374B21E53BF2006A8C86 /* Main.storyboard */; };
-		3AD9374F21E53BF3006A8C86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AD9374E21E53BF3006A8C86 /* Assets.xcassets */; };
 		3AD9375221E53BF3006A8C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD9375021E53BF3006A8C86 /* LaunchScreen.storyboard */; };
 		BC32ABE52577273100CE173F /* YOLOv3TinyNew.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BC32ABE32577272D00CE173F /* YOLOv3TinyNew.mlmodel */; };
-		BC32ABE62577273100CE173F /* resnet50custom_recent.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BC32ABE42577273100CE173F /* resnet50custom_recent.mlmodel */; };
-		BC9151A2255A26BE00A39541 /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9151A1255A26BE00A39541 /* DrawingBoundingBoxView.swift */; };
+		BCAE6DC4258EBE95003F28DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCAE6DC3258EBE95003F28DD /* Assets.xcassets */; };
+		BCEBE603258005260030CC33 /* resnet_train_final.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BCEBE602258005260030CC33 /* resnet_train_final.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,18 +33,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3A92F21F21FF2AAC007E9BBE /* UIView+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
 		3A93779021F0B181007386E4 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		3AD9374421E53BF2006A8C86 /* CameraKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD9374721E53BF2006A8C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD9374C21E53BF2006A8C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3AD9374E21E53BF3006A8C86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AD9375121E53BF3006A8C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AD9375321E53BF3006A8C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AD9375A21E53C14006A8C86 /* CameraKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CameraKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC32ABE32577272D00CE173F /* YOLOv3TinyNew.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3TinyNew.mlmodel; sourceTree = "<group>"; };
-		BC32ABE42577273100CE173F /* resnet50custom_recent.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = resnet50custom_recent.mlmodel; sourceTree = "<group>"; };
-		BC9151A1255A26BE00A39541 /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
+		BCAE6DC3258EBE95003F28DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CameraKitDemo/Assets.xcassets; sourceTree = "<group>"; };
+		BCEBE602258005260030CC33 /* resnet_train_final.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = resnet_train_final.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +60,7 @@
 		190FA5E12541320D00FE7540 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				BC32ABE42577273100CE173F /* resnet50custom_recent.mlmodel */,
+				BCEBE602258005260030CC33 /* resnet_train_final.mlmodel */,
 				BC32ABE32577272D00CE173F /* YOLOv3TinyNew.mlmodel */,
 			);
 			path = models;
@@ -73,6 +69,7 @@
 		3AD9373B21E53BF2006A8C86 = {
 			isa = PBXGroup;
 			children = (
+				BCAE6DC3258EBE95003F28DD /* Assets.xcassets */,
 				3AD9374621E53BF2006A8C86 /* CameraKitDemo */,
 				3AD9374521E53BF2006A8C86 /* Products */,
 				3AD9375921E53C14006A8C86 /* Frameworks */,
@@ -93,12 +90,9 @@
 				190FA5E12541320D00FE7540 /* models */,
 				3AD9374B21E53BF2006A8C86 /* Main.storyboard */,
 				3A93779021F0B181007386E4 /* VideoViewController.swift */,
-				3A92F21F21FF2AAC007E9BBE /* UIView+Border.swift */,
-				3AD9374E21E53BF3006A8C86 /* Assets.xcassets */,
 				3AD9375021E53BF3006A8C86 /* LaunchScreen.storyboard */,
 				3AD9374721E53BF2006A8C86 /* AppDelegate.swift */,
 				3AD9375321E53BF3006A8C86 /* Info.plist */,
-				BC9151A1255A26BE00A39541 /* DrawingBoundingBoxView.swift */,
 			);
 			path = CameraKitDemo;
 			sourceTree = "<group>";
@@ -144,6 +138,7 @@
 				TargetAttributes = {
 					3AD9374321E53BF2006A8C86 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -171,7 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD9375221E53BF3006A8C86 /* LaunchScreen.storyboard in Resources */,
-				3AD9374F21E53BF3006A8C86 /* Assets.xcassets in Resources */,
+				BCAE6DC4258EBE95003F28DD /* Assets.xcassets in Resources */,
 				3AD9374D21E53BF2006A8C86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,11 +178,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC9151A2255A26BE00A39541 /* DrawingBoundingBoxView.swift in Sources */,
 				3A93779121F0B181007386E4 /* VideoViewController.swift in Sources */,
-				BC32ABE62577273100CE173F /* resnet50custom_recent.mlmodel in Sources */,
-				3A92F22021FF2AAC007E9BBE /* UIView+Border.swift in Sources */,
 				3AD9374821E53BF2006A8C86 /* AppDelegate.swift in Sources */,
+				BCEBE603258005260030CC33 /* resnet_train_final.mlmodel in Sources */,
 				BC32ABE52577273100CE173F /* YOLOv3TinyNew.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +329,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FGTU3L286N;
 				INFOPLIST_FILE = CameraKitDemo/Info.plist;
@@ -344,8 +338,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.krishna.CameraKitDemos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krishna.CameraKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FGTU3L286N;
@@ -364,7 +360,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.krishna.CameraKitDemos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krishna.CameraKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;

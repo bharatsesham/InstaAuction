@@ -1,9 +1,6 @@
 //
-//  CameraKit.h
-//  CameraKit
 //
-//  Created by Adrian Mateoaea on 08/01/2019.
-//  Copyright © 2019 Wonderkiln. All rights reserved.
+//  Created by Avinash Parasurampuram on 08/20/2020.
 //
 
 #import <UIKit/UIKit.h>

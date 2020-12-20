@@ -6,9 +6,9 @@
 //  Copyright © 2019 Wonderkiln. All rights reserved.
 //
 
-import Foundation
-
-public enum CKFError: Error {
-    case captureDeviceNotFound
-    case error(String)
-}
+//import Foundation
+//
+//public enum CKFError: Error {
+//    case captureDeviceNotFound
+//    case error(String)
+//}
