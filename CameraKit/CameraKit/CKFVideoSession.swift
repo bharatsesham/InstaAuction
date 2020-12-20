@@ -63,26 +63,6 @@ public class VideoCaptureSession: CKFSession {
         }
     }
 
-    @objc public override var zoom: Double {
-        didSet {
-            guard let device = self.captureDeviceInput?.device else {
-                return
-            }
-
-            do {
-                try device.lockForConfiguration()
-                device.videoZoomFactor = CGFloat(self.zoom)
-                device.unlockForConfiguration()
-            } catch {
-                //
-            }
-
-            if let delegate = self.delegate {
-                delegate.didChangeValue(session: self, value: self.zoom, key: "zoom")
-            }
-        }
-    }
-
     let videoOutput = AVCaptureVideoDataOutput()
     let depthOutput = AVCaptureDepthDataOutput()
     let dataOutputQueue = DispatchQueue(label: "video data queue",
@@ -160,10 +140,6 @@ public class VideoCaptureSession: CKFSession {
             self.errorCallback = { (_) in }
         }
         self.recordCallback(url)
-    }
-
-    @objc public func togglePosition() {
-        self.cameraPosition = self.cameraPosition == .back ? .front : .back
     }
 
 }
@@ -287,7 +263,8 @@ extension CKFVideoSession: AVCaptureVideoDataOutputSampleBufferDelegate {
             _captureState = .capturing
             _time = timestamp_av
         case .capturing:
-            // Using AVAssetWriterInputPixelBufferAdaptor, we append the sampleBuffer received from the videop frame to this adapter.
+            // Using AVAssetWriterInputPixelBufferAdaptor, we append the sampleBuffer received from the videop frame to this
+            // adapter.
             if _assetWriterInput?.isReadyForMoreMediaData == true {
                 let time = CMTime(seconds: timestamp_av - _time, preferredTimescale: CMTimeScale(600))
                 _adpater?.append(CMSampleBufferGetImageBuffer(sampleBuffer)!, withPresentationTime: time)
