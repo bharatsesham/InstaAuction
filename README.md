@@ -154,8 +154,10 @@ Below are some of the challenges/implementations that we discussed earlier and p
 * We have tried almost five different software stabilization algorithms like Point Feature Matching, Advanced Eyes Articulate Mechanism, Mathematical transformations using OpenCV, videostab in OpenCV, Optical Flow using OpenCV but none of them are that efficient in completely stabilizing the video, one way to achieve the best stabilization is to use a hardware stabilization accessory like gimbal.  
 
 
+<h3 align="left">8. 
+<ins>Sample Output</ins></h3>
 
-
+![](https://github.com/bharatsesham/InstaAuction/blob/main/Documentation/360%20Imagery.gif)
 
 <h3 align="left">
 References</h3>
